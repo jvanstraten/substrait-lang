@@ -1,5 +1,4 @@
 
-#ANTLR_JAR   = "/usr/share/java/antlr-complete.jar"
 ANTLR_JAR   = $(shell pwd)/antlr.jar
 JAVA_PREFIX = "$(shell pwd)/java_parser:$(ANTLR_JAR):$(CLASSPATH)"
 JAVA        = CLASSPATH=$(JAVA_PREFIX) java
@@ -37,6 +36,8 @@ as_test: disas_test.sub parser/$(GRAMMAR)Parser.py
 .PHONY: clean
 clean:
 	rm -rf parser java_parser
-	rm disas_test.sub
-	-rm $(ANTLR_JAR)
+	rm -f disas_test.sub
 
+.PHONY: distclean
+distclean: clean
+	rm -f $(ANTLR_JAR)
