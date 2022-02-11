@@ -1,0 +1,583 @@
+{
+ "extensionUris": [],
+ "extensions": [
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 0,
+    "name": "lessthanequal"
+   }
+  },
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 1,
+    "name": "is_not_null"
+   }
+  },
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 2,
+    "name": "and"
+   }
+  },
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 3,
+    "name": "*"
+   }
+  },
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 4,
+    "name": "-"
+   }
+  },
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 5,
+    "name": "sum"
+   }
+  },
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 6,
+    "name": "+"
+   }
+  },
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 7,
+    "name": "avg"
+   }
+  },
+  {
+   "extensionFunction": {
+    "extensionUriReference": 0,
+    "functionAnchor": 8,
+    "name": "count_star"
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": {
+    "sort": {
+     "input": {
+      "project": {
+       "input": {
+        "aggregate": {
+         "input": {
+          "project": {
+           "input": {
+            "read": {
+             "common": {
+              "direct": {}
+             },
+             "filter": {
+              "scalarFunction": {
+               "functionReference": 2,
+               "args": [
+                {
+                 "scalarFunction": {
+                  "functionReference": 0,
+                  "args": [
+                   {
+                    "selection": {
+                     "directReference": {
+                      "structField": {
+                       "field": 10
+                      }
+                     }
+                    }
+                   },
+                   {
+                    "literal": {
+                     "nullable": false,
+                     "string": "1998-09-02"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "scalarFunction": {
+                  "functionReference": 1,
+                  "args": [
+                   {
+                    "selection": {
+                     "directReference": {
+                      "structField": {
+                       "field": 10
+                      }
+                     }
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             },
+             "projection": {
+              "select": {
+               "structItems": [
+                {
+                 "field": 10
+                },
+                {
+                 "field": 8
+                },
+                {
+                 "field": 9
+                },
+                {
+                 "field": 4
+                },
+                {
+                 "field": 5
+                },
+                {
+                 "field": 6
+                },
+                {
+                 "field": 7
+                }
+               ]
+              },
+              "maintainSingularStruct": false
+             },
+             "namedTable": {
+              "names": [
+               "lineitem"
+              ]
+             }
+            }
+           },
+           "expressions": [
+            {
+             "selection": {
+              "directReference": {
+               "structField": {
+                "field": 1
+               }
+              }
+             }
+            },
+            {
+             "selection": {
+              "directReference": {
+               "structField": {
+                "field": 2
+               }
+              }
+             }
+            },
+            {
+             "selection": {
+              "directReference": {
+               "structField": {
+                "field": 3
+               }
+              }
+             }
+            },
+            {
+             "selection": {
+              "directReference": {
+               "structField": {
+                "field": 4
+               }
+              }
+             }
+            },
+            {
+             "scalarFunction": {
+              "functionReference": 3,
+              "args": [
+               {
+                "selection": {
+                 "directReference": {
+                  "structField": {
+                   "field": 4
+                  }
+                 }
+                }
+               },
+               {
+                "scalarFunction": {
+                 "functionReference": 4,
+                 "args": [
+                  {
+                   "literal": {
+                    "decimal": {
+                     "value": "MTAw",
+                     "precision": 16,
+                     "scale": 2
+                    },
+                    "nullable": false
+                   }
+                  },
+                  {
+                   "selection": {
+                    "directReference": {
+                     "structField": {
+                      "field": 5
+                     }
+                    }
+                   }
+                  }
+                 ]
+                }
+               }
+              ]
+             }
+            },
+            {
+             "selection": {
+              "directReference": {
+               "structField": {
+                "field": 6
+               }
+              }
+             }
+            },
+            {
+             "selection": {
+              "directReference": {
+               "structField": {
+                "field": 5
+               }
+              }
+             }
+            }
+           ]
+          }
+         },
+         "groupings": [
+          {
+           "groupingExpressions": [
+            {
+             "selection": {
+              "directReference": {
+               "structField": {
+                "field": 0
+               }
+              }
+             }
+            },
+            {
+             "selection": {
+              "directReference": {
+               "structField": {
+                "field": 1
+               }
+              }
+             }
+            }
+           ]
+          }
+         ],
+         "measures": [
+          {
+           "measure": {
+            "functionReference": 5,
+            "args": [
+             {
+              "selection": {
+               "directReference": {
+                "structField": {
+                 "field": 2
+                }
+               }
+              }
+             }
+            ],
+            "sorts": [],
+            "phase": "AGGREGATION_PHASE_UNSPECIFIED"
+           }
+          },
+          {
+           "measure": {
+            "functionReference": 5,
+            "args": [
+             {
+              "selection": {
+               "directReference": {
+                "structField": {
+                 "field": 3
+                }
+               }
+              }
+             }
+            ],
+            "sorts": [],
+            "phase": "AGGREGATION_PHASE_UNSPECIFIED"
+           }
+          },
+          {
+           "measure": {
+            "functionReference": 5,
+            "args": [
+             {
+              "selection": {
+               "directReference": {
+                "structField": {
+                 "field": 4
+                }
+               }
+              }
+             }
+            ],
+            "sorts": [],
+            "phase": "AGGREGATION_PHASE_UNSPECIFIED"
+           }
+          },
+          {
+           "measure": {
+            "functionReference": 5,
+            "args": [
+             {
+              "scalarFunction": {
+               "functionReference": 3,
+               "args": [
+                {
+                 "selection": {
+                  "directReference": {
+                   "structField": {
+                    "field": 4
+                   }
+                  }
+                 }
+                },
+                {
+                 "scalarFunction": {
+                  "functionReference": 6,
+                  "args": [
+                   {
+                    "literal": {
+                     "decimal": {
+                      "value": "MTAw",
+                      "precision": 16,
+                      "scale": 2
+                     },
+                     "nullable": false
+                    }
+                   },
+                   {
+                    "selection": {
+                     "directReference": {
+                      "structField": {
+                       "field": 5
+                      }
+                     }
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ],
+            "sorts": [],
+            "phase": "AGGREGATION_PHASE_UNSPECIFIED"
+           }
+          },
+          {
+           "measure": {
+            "functionReference": 7,
+            "args": [
+             {
+              "selection": {
+               "directReference": {
+                "structField": {
+                 "field": 2
+                }
+               }
+              }
+             }
+            ],
+            "sorts": [],
+            "phase": "AGGREGATION_PHASE_UNSPECIFIED"
+           }
+          },
+          {
+           "measure": {
+            "functionReference": 7,
+            "args": [
+             {
+              "selection": {
+               "directReference": {
+                "structField": {
+                 "field": 3
+                }
+               }
+              }
+             }
+            ],
+            "sorts": [],
+            "phase": "AGGREGATION_PHASE_UNSPECIFIED"
+           }
+          },
+          {
+           "measure": {
+            "functionReference": 7,
+            "args": [
+             {
+              "selection": {
+               "directReference": {
+                "structField": {
+                 "field": 6
+                }
+               }
+              }
+             }
+            ],
+            "sorts": [],
+            "phase": "AGGREGATION_PHASE_UNSPECIFIED"
+           }
+          },
+          {
+           "measure": {
+            "functionReference": 8,
+            "args": [],
+            "sorts": [],
+            "phase": "AGGREGATION_PHASE_UNSPECIFIED"
+           }
+          }
+         ]
+        }
+       },
+       "expressions": [
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 0
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 1
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 2
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 3
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 4
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 5
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 6
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 7
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 8
+           }
+          }
+         }
+        },
+        {
+         "selection": {
+          "directReference": {
+           "structField": {
+            "field": 9
+           }
+          }
+         }
+        }
+       ]
+      }
+     },
+     "sorts": [
+      {
+       "expr": {
+        "selection": {
+         "directReference": {
+          "structField": {
+           "field": 0
+          }
+         }
+        }
+       },
+       "direction": "SORT_DIRECTION_ASC_NULLS_FIRST"
+      },
+      {
+       "expr": {
+        "selection": {
+         "directReference": {
+          "structField": {
+           "field": 1
+          }
+         }
+        }
+       },
+       "direction": "SORT_DIRECTION_ASC_NULLS_FIRST"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "expectedTypeUrls": []
+}
